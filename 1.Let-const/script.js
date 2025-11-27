@@ -6,20 +6,41 @@
     1. let & const sont block-scoped, var est function-scoped.
 */
 
+if(true){
+    // var test = "Hello world"
+    let test2 = "Bonjour"
+    const test3 = "Merci pour le service"
+}
+// console.log(test)
 
+function foo(){
+    var number = 10
+    let number2 = 20
+}
+// console.log(number)
 
 /* 
     2. On ne peut pas déclarer de const vide, contrairement à let ou var.
 */
 
+var animal 
+let lion 
+const cat = 10
 
+// console.log(lion)
 
 
 /*
    3. On peut redéclarer des variables var sans provoquer d'erreurs.
 */
 
+var dog = "coco"
+var dog = "merci"
 
+// console.log(dog)
+
+// let cat = "merci"
+// let cat = "ok"
 
 /* 
     4. Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à undefined.
@@ -28,10 +49,14 @@
     Hoisting JavaScript
     Les déclarations de fonctions et de variables sont hissées en JavaScript. Cela signifie qu'elles sont stockées dans la mémoire du VO(Variables Object) du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution du code ne commence.
 */
-
-
+// console.log(test)
+// console.log(test2)
+let test2 = "test2"
+var test = "test"
+// console.log(test2)
 /* 
     5. Une variable var déclarée globalement se fait enregistrer dans l'objet global, pouvant provoquer des bugs de clash entre variables globales.
     Let et const peuvent se faire enregistrer globalement, mais sans être accessibles comme propriétés directes de window, elles sont inscrites dans l'environnement lexical de l'objet global (l'ensemble des déclarations accessibles par ce dernier).
 */
 
+console.log(window)
